@@ -44,6 +44,24 @@
         tap-ms = <30>;
     };
 
+    original_scroll_30: original_scroll_30 {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+        tap-ms = <30>;
+        label = "ORIGINAL_SCROLL_30";
+    };
+
+    scroll_100: scroll_100 {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+        tap-ms = <100>;
+        label = "SCROLL_100";
+    };
+
     behaviors {
     };
 
@@ -59,7 +77,7 @@
 &kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 3   &lt 4 SPACE    &mt LC(V) LC(C)      &kp SPACE  &kp ENTER  &kp RCTRL  &mo 2    &kp RIGHT_SHIFT
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_100>;
             display-name = "LAYER0";
         };
 
